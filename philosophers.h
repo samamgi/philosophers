@@ -13,7 +13,6 @@
 #ifndef PHILOSOPHERS_H
 # define PHILOSOPHERS_H
 
-# include "./libft/libft.h"
 # include <errno.h>
 # include <limits.h>
 # include <pthread.h>
@@ -139,5 +138,7 @@ void						sync_philos_threads(t_data_table *table);
 void						init_annex(t_data_table *table);
 
 void						unsynch_philo(t_philo *philo);
+
+int							ft_atoi(const char *nptr);
 
 #endif

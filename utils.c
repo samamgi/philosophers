@@ -14,7 +14,7 @@
 
 void	exit_error(const char *error)
 {
-	ft_printf("error : %s\n", error);
+	printf("error : %s\n", error);
 	exit(EXIT_FAILURE);
 }
 
