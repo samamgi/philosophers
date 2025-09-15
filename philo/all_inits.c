@@ -53,7 +53,11 @@ void	table_init(t_data_table *table)
 	i = 0;
 	table->fourchettes = (t_fourchette *)malloc(sizeof(t_fourchette)
 			* (table->philo_nbr));
+	if (!(table->fourchettes))
+		return ;
 	table->philos = (t_philo *)malloc(sizeof(t_philo) * (table->philo_nbr));
+	if (!(table->philos))
+		return ;
 	while (i < table->philo_nbr)
 	{
 		safe_mutex_handle(&table->fourchettes[i].fourchette, INIT);
