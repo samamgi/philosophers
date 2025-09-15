@@ -42,7 +42,7 @@ void	*monitor(void *data)
 	table = (t_data_table *)data;
 	while (is_running(&table->table_mutex_safe, &table->size_threads_run,
 			table->philo_nbr) == false)
-		ft_usleep(0, table);
+		ft_usleep(1000, table);
 	while (is_finished(table) == false)
 	{
 		i = 0;
